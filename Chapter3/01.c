@@ -1,6 +1,8 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
 int main(int argc, char* argv[])
 {
@@ -24,7 +26,7 @@ int main(int argc, char* argv[])
 
     close(filedes);
 
-    fdnew1 = open("newdata1.txt", O_RDWr | O_CREAT, 0644);
+    fdnew1 = open("newdata1.txt", O_RDWR | O_CREAT, 0644);
     fdnew2 = creat("newdata2.txt", 0644);
 
     close(fdnew1);
