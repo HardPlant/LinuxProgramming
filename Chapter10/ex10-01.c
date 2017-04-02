@@ -1,6 +1,6 @@
 #include <unistd.h>
-#include <stgnal.h>
-
+#include <signal.h>
+#include <stdio.h>
 void handler(int signum);
 int flag = 5;
 
